@@ -9,9 +9,12 @@ public class FileWrie {
 	
 	
 		try {
+			Scanner scan =new Scanner (System.in);
+			System.out.println("Enter text here");
+			String data=scan.nextLine();
 			
 			FileWriter fw=new FileWriter("text.txt");
-			fw.write("Hi i m testing file Writer now ");
+			fw.write(data);
 			fw.close();
 			System.out.println("Text save successfull !");
 					
