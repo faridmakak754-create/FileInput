@@ -21,6 +21,24 @@ public class FileWrie {
 			System.out.println("File writer failed");
 		}
 		
+		try {
+			BufferedReader br=new BufferedReader(new FileReader("text.txt"));
+			System.out.println("Reading from file");
+			String line;
+		
+			while((line=br.readLine()) != null)
+			{
+				System.out.println(line);
+			}
+			
+		}
+		catch(Exception e)
+		{
+			System.out.println(" read text failed");
+			
+		}
+		
+		
 	}
 
 }
