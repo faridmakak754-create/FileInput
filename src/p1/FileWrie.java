@@ -11,14 +11,26 @@ public class FileWrie {
 		try {
 			Scanner scan =new Scanner (System.in);
 			System.out.println("Enter text here");
+			FileWriter fw=new FileWriter("text.txt",true);
+			while(true) {
+				
+		
 			String data=scan.nextLine();
 			
-			FileWriter fw=new FileWriter("text.txt");
-			fw.write(data);
+			if(data.equalsIgnoreCase("exit"))
+			{
+				break;
+			}
+			fw.write(data +"\n");
+			
+			}
+		
 			fw.close();
+			scan.close();
 			System.out.println("Text save successfull !");
 					
 		}
+	
 		catch(Exception e)
 		{
 			System.out.println("File writer failed");
